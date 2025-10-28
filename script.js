@@ -119,4 +119,30 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // --- EFECTO DE ESCRITURA ---
+    const typingTarget = document.getElementById('typing-effect');
+    if (typingTarget) {
+        const text = "Los caficultores de la I.E. San Sebastián y áreas circundantes enfrentan una problemática crítica en la fase de secado de su producción de café. La dependencia de métodos tradicionales, que son vulnerables a las condiciones climáticas variables e inestables (lluvias, humedad), resulta en un secado inconsistente y prolongado. Esta inconsistencia es la principal causa de defectos en el grano (e.g., sobre-fermentación, sabores a moho), lo que reduce la calidad final del producto, disminuye su precio en el mercado y aumenta significativamente los costos operativos y la necesidad de mano de obra.";
+        let index = 0;
+        let isTyping = false;
+
+        const typingObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !isTyping) {
+                    isTyping = true;
+                    function type() {
+                        if (index < text.length) {
+                            typingTarget.innerHTML += text.charAt(index);
+                            index++;
+                            setTimeout(type, 50); // Velocidad de escritura
+                        }
+                    }
+                    type();
+                }
+            });
+        }, { threshold: 0.5 });
+
+        typingObserver.observe(typingTarget);
+    }
+
 });
