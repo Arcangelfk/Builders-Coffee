@@ -1129,3 +1129,57 @@ footer {
     }
 
 }
+
+/* --- SECCIÓN IMPACTO Y METAS --- */
+
+#impacto-metas .card-container {
+    margin-bottom: 4rem;
+}
+
+.metas {
+    background-color: var(--white-color);
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.metas h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.metas h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+.metas p, .metas ol {
+    text-align: left;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.metas ol {
+    padding-left: 2rem;
+}
+
+.metas ol li {
+    margin-bottom: 1rem;
+}
+
+/* --- SECCIÓN PROBLEMA --- */
+
+#problema {
+    background-color: var(--white-color);
+}
+
+#typing-effect {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify;
+    min-height: 150px;
+}
